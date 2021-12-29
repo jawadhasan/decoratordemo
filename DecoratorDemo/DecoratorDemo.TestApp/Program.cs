@@ -9,9 +9,11 @@ namespace DecoratorDemo.TestApp
         static void Main(string[] args)
         {
 
-            //DecoratorExample1();
+            //Un-Comment/Comment function calls below:
+
+            DecoratorExample1();
             //LoggingDecoratorExample();
-            CachingDecoratorExample();
+            //CachingDecoratorExample();
         }
 
         static void DecoratorExample1()
@@ -24,17 +26,13 @@ namespace DecoratorDemo.TestApp
 
             Console.WriteLine(result);
         }
-
         static void LoggingDecoratorExample()
         {
             var backupCommand = new LoggingDecorator(new BackupCommand());
             var result = backupCommand.Execute();
             Console.WriteLine(result);
 
-        }
-
-      
-
+        }   
         static void CachingDecoratorExample()
         {
             //var checkUpdatesCommand = new CachingDecorator(new CheckUpdatesCommand());
